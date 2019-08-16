@@ -95,7 +95,7 @@ class InsertActivity : AppCompatActivity() ,DatePickerDialog.OnDateSetListener {
 
         flag = 1
         //insertText(this, nameText, price.toString(), currentDate.time.toString())
-        datalogging.getDate(dayOfMonth)
+        datalogging.getDate(dayOfMonth, month, year)
 
         moveToNext()
 
@@ -152,12 +152,17 @@ class Datalogging(){
         SwitchChan = switchchan
     }
 
-    fun getDate(date: Int){
-        Date = date.toString()
+    fun getDate(date: Int, month :Int,year :Int){
+        Date = (date + (month +1) * 100 + year * 10000).toString()
     }
 
     fun logData(context: Context){
-        insertText(context, Name, Price, Date, SwitchChan)
+
+        val cl =Calendar.getInstance()
+        //val logtime = cl.setTimeInMillis(milliSeconds)
+        val logtime = cl.time.time
+        insertText(context, Name, Price, Date, SwitchChan, logtime)
+
     }
 
 }
@@ -181,7 +186,6 @@ class DatePickerFragment : DialogFragment(), DatePickerDialog.OnDateSetListener 
     }
 
 }
-
 
 
 

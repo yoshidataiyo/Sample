@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">test0710</string>
+    <string name="colorExpenditure">"@color/colorExpenditure"</string>
+</resources>
