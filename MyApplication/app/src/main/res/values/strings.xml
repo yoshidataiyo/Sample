@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">残金確認</string>
+    <string name="title1">日付</string>
+    <string name="title2">備考</string>
+    <string name="title3">金額</string>
+    <string name="plus"> &gt;&gt; </string>
+    <string name="minus"> &lt;&lt;</string>
+</resources>
+
+
+
+
